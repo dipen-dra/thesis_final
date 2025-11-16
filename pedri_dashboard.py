@@ -1255,18 +1255,152 @@ FOOTBALL_GREEN = "#28a745"
 # =======================================
 # GLOBAL CSS
 # =======================================
+# st.markdown(
+#     f"""
+#     <style>
+#         .stApp {{
+#             background-color: {PRIMARY_BG};
+#         }}
+#         .block-container {{
+#             max-width: 1200px;
+#             margin: auto;
+#             padding-top: 2rem;
+#             padding-bottom: 3rem;
+#         }}
+#         .player-image {{
+#             width: 160px;
+#             height: 160px;
+#             border-radius: 50%;
+#             object-fit: cover;
+#             border: 4px solid white;
+#             box-shadow: 0 12px 35px rgba(15, 23, 42, 0.25);
+#         }}
+#         .hero-card {{
+#             background: white;
+#             border-radius: 22px;
+#             padding: 1.5rem 1.75rem;
+#             box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+#             border: 1px solid #e5e7eb;
+#         }}
+#         .hero-name {{
+#             font-size: 1.8rem;
+#             font-weight: 800;
+#             margin-bottom: 0.25rem;
+#             color: #111827;
+#         }}
+#         .hero-subtitle {{
+#             font-size: 0.98rem;
+#             color: #4b5563;
+#             margin-bottom: 0.5rem;
+#         }}
+#         .hero-tag {{
+#             display: inline-block;
+#             padding: 0.25rem 0.65rem;
+#             border-radius: 999px;
+#             font-size: 0.75rem;
+#             font-weight: 600;
+#             background: rgba(40,167,69,0.08);
+#             color: {FOOTBALL_GREEN};
+#             margin-right: 0.4rem;
+#         }}
+#         .metric-card {{
+#             background: white;
+#             border-radius: 18px;
+#             padding: 1rem 1.25rem;
+#             box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+#             border: 1px solid #e5e7eb;
+#         }}
+#         .metric-label {{
+#             font-size: 0.78rem;
+#             text-transform: uppercase;
+#             letter-spacing: 0.08em;
+#             color: #6b7280;
+#             margin-bottom: 0.15rem;
+#         }}
+#         .metric-value {{
+#             font-size: 1.3rem;
+#             font-weight: 700;
+#             color: #111827;
+#         }}
+#         .metric-sub {{
+#             font-size: 0.78rem;
+#             color: #9ca3af;
+#             margin-top: 0.1rem;
+#         }}
+#         .section-title {{
+#             font-size: 1.1rem;
+#             font-weight: 700;
+#             margin-top: 1.5rem;
+#             margin-bottom: 0.3rem;
+#             color: #111827;
+#         }}
+#         .section-caption {{
+#             font-size: 0.85rem;
+#             color: #6b7280;
+#             margin-bottom: 0.75rem;
+#         }}
+#         .insight-card {{
+#             background: white;
+#             border-radius: 18px;
+#             padding: 1.25rem 1.5rem;
+#             box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+#             border: 1px solid #e5e7eb;
+#         }}
+#         .insight-title {{
+#             font-size: 0.9rem;
+#             font-weight: 600;
+#             text-transform: uppercase;
+#             color: {FOOTBALL_GREEN};
+#             letter-spacing: 0.15em;
+#             margin-bottom: 0.5rem;
+#         }}
+#         .insight-body {{
+#             font-size: 0.95rem;
+#             color: #111827;
+#             line-height: 1.5;
+#         }}
+#         .stTabs [role="tablist"] {{
+#             gap: 0.5rem;
+#         }}
+#         .stTabs [role="tab"] {{
+#             padding: 0.4rem 1rem;
+#             border-radius: 999px;
+#             border: 1px solid #d1d5db;
+#             background: white;
+#         }}
+#         .stTabs [aria-selected="true"] {{
+#             border-color: {FOOTBALL_GREEN};
+#             background: rgba(40,167,69,0.08);
+#         }}
+#     </style>
+#     """,
+#     unsafe_allow_html=True,
+# )
+
+# =======================================
+# GLOBAL CSS
+# =======================================
 st.markdown(
     f"""
     <style>
+
+        /* =============================
+           GLOBAL APP SETTINGS
+        ============================== */
         .stApp {{
-            background-color: {PRIMARY_BG};
+            background-color: {PRIMARY_BG} !important;
         }}
         .block-container {{
-            max-width: 1200px;
-            margin: auto;
-            padding-top: 2rem;
-            padding-bottom: 3rem;
+            max-width: 1200px !important;
+            margin: auto !important;
+            padding-top: 2rem !important;
+            padding-bottom: 3rem !important;
         }}
+
+
+        /* =============================
+           PLAYER IMAGE
+        ============================== */
         .player-image {{
             width: 160px;
             height: 160px;
@@ -1275,6 +1409,11 @@ st.markdown(
             border: 4px solid white;
             box-shadow: 0 12px 35px rgba(15, 23, 42, 0.25);
         }}
+
+
+        /* =============================
+           HERO PLAYER CARD
+        ============================== */
         .hero-card {{
             background: white;
             border-radius: 22px;
@@ -1282,17 +1421,20 @@ st.markdown(
             box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
             border: 1px solid #e5e7eb;
         }}
+
         .hero-name {{
             font-size: 1.8rem;
             font-weight: 800;
             margin-bottom: 0.25rem;
             color: #111827;
         }}
+
         .hero-subtitle {{
             font-size: 0.98rem;
             color: #4b5563;
             margin-bottom: 0.5rem;
         }}
+
         .hero-tag {{
             display: inline-block;
             padding: 0.25rem 0.65rem;
@@ -1303,13 +1445,26 @@ st.markdown(
             color: {FOOTBALL_GREEN};
             margin-right: 0.4rem;
         }}
+
+
+        /* =============================
+           KPI METRIC CARDS
+        ============================== */
         .metric-card {{
             background: white;
             border-radius: 18px;
             padding: 1rem 1.25rem;
             box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
             border: 1px solid #e5e7eb;
+            text-align: center;
+            transition: 0.2s ease-in-out;
         }}
+
+        .metric-card:hover {{
+            transform: translateY(-4px);
+            box-shadow: 0 14px 36px rgba(15, 23, 42, 0.18);
+        }}
+
         .metric-label {{
             font-size: 0.78rem;
             text-transform: uppercase;
@@ -1317,16 +1472,23 @@ st.markdown(
             color: #6b7280;
             margin-bottom: 0.15rem;
         }}
+
         .metric-value {{
             font-size: 1.3rem;
             font-weight: 700;
             color: #111827;
         }}
+
         .metric-sub {{
             font-size: 0.78rem;
             color: #9ca3af;
             margin-top: 0.1rem;
         }}
+
+
+        /* =============================
+           SECTION TITLES
+        ============================== */
         .section-title {{
             font-size: 1.1rem;
             font-weight: 700;
@@ -1334,11 +1496,17 @@ st.markdown(
             margin-bottom: 0.3rem;
             color: #111827;
         }}
+
         .section-caption {{
             font-size: 0.85rem;
             color: #6b7280;
             margin-bottom: 0.75rem;
         }}
+
+
+        /* =============================
+           AI INSIGHT CARD
+        ============================== */
         .insight-card {{
             background: white;
             border-radius: 18px;
@@ -1346,6 +1514,7 @@ st.markdown(
             box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
             border: 1px solid #e5e7eb;
         }}
+
         .insight-title {{
             font-size: 0.9rem;
             font-weight: 600;
@@ -1354,28 +1523,45 @@ st.markdown(
             letter-spacing: 0.15em;
             margin-bottom: 0.5rem;
         }}
+
         .insight-body {{
             font-size: 0.95rem;
             color: #111827;
             line-height: 1.5;
         }}
-        .stTabs [role="tablist"] {{
-            gap: 0.5rem;
-        }}
+
+
+        /* =============================
+           FIX STREAMLIT TAB VISIBILITY
+        ============================== */
+
         .stTabs [role="tab"] {{
-            padding: 0.4rem 1rem;
-            border-radius: 999px;
-            border: 1px solid #d1d5db;
-            background: white;
+            background-color: white !important;
+            color: #374151 !important;   /* Visible dark text */
+            border-radius: 999px !important;
+            padding: 6px 18px !important;
+            border: 1px solid #d1d5db !important;
+            font-weight: 600 !important;
+            transition: all 0.2s ease-in-out !important;
         }}
-        .stTabs [aria-selected="true"] {{
-            border-color: {FOOTBALL_GREEN};
-            background: rgba(40,167,69,0.08);
+
+        .stTabs [role="tab"][aria-selected="true"] {{
+            background-color: rgba(40,167,69,0.15) !important;  /* Soft green */
+            color: #1f2937 !important;      /* Darker text */
+            border-color: #28a745 !important;  /* Green border */
+            font-weight: 700 !important;
         }}
+
+        .stTabs [role="tab"]:hover {{
+            background-color: rgba(40,167,69,0.10) !important;
+            color: #1f2937 !important;
+        }}
+
     </style>
     """,
     unsafe_allow_html=True,
 )
+
 
 # =======================================
 # UTILS
