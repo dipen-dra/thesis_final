@@ -1,0 +1,7 @@
+pedri_model_card.md
+requirements.txt
+.venv/
+venv/
+__pycache__/
+*.pyc
+pedri_24_25_data/
